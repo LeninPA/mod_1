@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--Este código es el maquetado de una solicitud de trabajo para un
+    creador de contenidos educativos
+    Hecho por Lenin Pavón Alvarez
+  -->
+<html./img_7/ lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Solicitud de trabajo</title>
+    <style media="screen">
+      body
+      {
+        background-color: #b85044;
+        font-family: sans-serif;
+        color: #f4f4f3;
+      }
+      h1
+      {
+        text-align: center;
+      }
+      fieldset
+      {
+        width: 300px;
+        text-align: center;
+      }
+      li
+      {
+        text-align: justify;
+      }
+      .center
+      {
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+      }
+      .der
+      {
+        text-align: right;
+      }
+      .centro
+      {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Solicitud de trabajo <br> Creador de contenidos educativos</h1>
+    <form action="actividad7.html" method="post">
+      <!--Datos personales-->
+      <fieldset class="center">
+        <legend><h3>Datos Personales</h3></legend>
+        <table align="center">
+          <tr>
+            <td class="der">Nombre</td>
+            <td> <input type="text" name="nombre" required> </td>
+          </tr>
+          <tr>
+            <td class="der">Apellido Paterno</td>
+            <td> <input type="text" name="paterno" required> </td>
+          </tr>
+          <tr>
+            <td class="der">Apellido Materno</td>
+            <td> <input type="text" name="materno" required> </td>
+          </tr>
+          <tr>
+            <td class="der">Sexo</td>
+            <td>
+              <select name="sexo" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="der">Correo electrónico</td>
+            <td> <input type="email" name="correo" required> </td>
+          </tr>
+        </table>
+      </fieldset>
+      <!--Cuestionario-->
+      <ol>
+        <li>¿Cuál de los siguientes es un sitio confiable?</li>
+        <table align="center">
+          <tr>
+            <td><input type="radio" name="sitio" value="sitio1" required> <img src="./img_7/sitio1.png" width="100%"></td>
+            <td><input type="radio" name="sitio" value="sitio2" required> <img src="./img_7/sitio2.png" width="100%"></td>
+            <td><input type="radio" name="sitio" value="sitio3" required> <img src="./img_7/sitio3.png" width="100%"></td>
+          </tr>
+        </table>
+        <li>
+          En el siguiente rango selecciona tu dominio de LaTeX siendo el extremo
+          derecho una capacidad avanzada y el extremo derecho una capacidad nula.
+        </li>
+          <br>
+          <input type="range" name="latex" min="0" max="10" class="center" value="0">
+          <br>
+          <li>
+            En el siguiente rango selecciona tu dominio de la paquetería de Tikz
+            y PGF de LaTex siendo el extremo derecho una capacidad avanzada y el
+            extremo derecho una capacidad nula.
+          </li>
+          <br>
+          <input type="range" name="tikz" min="0" max="10" class="center" value="0">
+          <br>
+          <li>Selecciona la cantidad de palabras por minuto (ppm) que puedes escribir.</li>
+          <br>
+          <table align="center">
+            <td><input type="number" name="ppm" min="60" max="500" class="center" required></td>
+            <td style="text-align: right;">ppm</td>
+          </table>
+          <br>
+          <li>Selecciona las herramientas de trabajo que ya tengas</li>
+          <table  align="center">
+            <tr>
+              <td> <input type="checkbox" name="computadora" value="computadora">Computadora</td>
+            </tr>
+            <tr>
+              <td> <input type="checkbox" name="PdfLaTex" value="PdfLaTex">PdfLaTex</td>
+            </tr>
+            <tr>
+              <td> <input type="checkbox" name="Photoshop" value="Photoshop">Photoshop</td>
+            </tr>
+            <tr>
+              <td> <input type="checkbox" name="Dibujo" value="Dibujo">Herramientas de dibujo</td>
+            </tr>
+          </table>
+          <li>Selecciona el nombre de tu licenciatura</li>
+          <table align="center">
+            <td>
+              <select name="LicIng">
+                <option value="Ing">Ing</option>
+                <option value="Lic">Lic</option>
+              </select>
+            </td>
+            <td>en</td>
+            <td>
+              <input list="lista" name="lista" required>
+              <datalist id="lista">
+                <option value="Física">Física</option>
+                <option value="Matemáticas">Matemáticas</option>
+                <option value="Física y Matemáticas">Física y Matemáticas</option>
+                <option value="en Sistemas">en Sistemas</option>
+                <option value="Geofísica">Geofísica</option>
+              </datalist>
+            </td>
+          </table>
+      </ol>
+      <br><br><br>
+      <input type="submit" name="Entregar" value="Entregar" class="center">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--Este es un maquetado de la pantalla de inicio del juego Destruye el fuerte.
+Se selecciona una dificultad (fácil, medio o difícil) y luego se envía al
+programa en php.-->
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Destruye el fuerte</title>
+    <link rel="stylesheet" href="../design/actividad14.css">
+  </head>
+  <body>
+    <h1>Destruye el fuerte</h1>
+    <form action="../dynamics/actividad14.php" method="get">
+      <h2>Selecciona tu dificultad</h2>
+      <table align="center">
+        <tr>
+          <td>
+            <select name="dif">
+              <option value="facil">Fácil (4x4)</option>
+              <option value="medio">Medio (6x6)</option>
+              <option value="dificil">Difícil (8x8)</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <br>
+            <input type="submit" name="Enviar" value="Enviar">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

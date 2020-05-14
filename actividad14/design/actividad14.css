@@ -1,0 +1,23 @@
+body
+{
+  background-color: #0f283c;
+  font-family: sans-serif;
+  color:#dfdfdf;
+}
+h1, h2, h3
+{
+  text-align: center;
+  color: #f7f7f6;
+}
+textarea
+{
+  resize: none;
+}
+select, input
+{
+  font-size: 1.3em;
+}
+.center
+{
+  text-align: center;
+}

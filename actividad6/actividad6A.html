@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--Hecho por Lenin Pavón Alvarez-->
+<!--Página de registro a uwu.com-->
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registro</title>
+    <style media="screen">
+      body
+      {
+        background-color: #b85044;
+        font-family: sans-serif;
+        color: #f4f4f3;
+      }
+      h1, h2, h3, button
+      {
+        text-align: center;
+      }
+      td
+      {
+        color: black;
+      }
+      .der
+      {
+        text-align: right;
+      }
+      .center
+      {
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+      }
+    </style>
+  </head>
+  <body>
+      <h1>Bienvenido a <br> uwu.com</h1>
+      <h2>Registro</h2>
+      <!--Registro-->
+      <form action="actividad6A.html" method="post">
+        <br><br><br>
+        <table align="center" style="background-color: #f4f4f3;">
+          <tr>
+            <td class="der">Nombre</td>
+            <td> <input type="text" name="Nombre" required> </td>
+          </tr>
+          <tr>
+            <td class="der">Apellido Paterno</td>
+            <td> <input type="text" name="Paterno" required> </td>
+          </tr>
+          <tr>
+            <td class="der">Apellido Materno</td>
+            <td> <input type="text" name="Materno" required> </td>
+          </tr>
+          <tr>
+            <td class="der">Correo Electrónico</td>
+            <td> <input type="email" name="correo" required> </td>
+          </tr>
+          <tr>
+            <td class="der">Contraseña</td>
+            <td> <input type="password" name="password" minlength="8" required> </td>
+          </tr>
+        </table>
+        <br>
+        <!--Botones-->
+        <table align="center">
+          <td> <input type="submit" name="uwu" value="uwu"> </td>
+        </table>
+        <br><br>
+      </form>
+      <h3>¿Ya tienes una cuenta?</h3>
+      <button class="center" onclick="location.href='actividad6B.html'">Inicio de sesión</button>
+  </body>
+</html>

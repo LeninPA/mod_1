@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--Este programa envía un mensaje a traducir ya sea de morse a texto o de
+texto a morse a un documento de php del mismo nombre.-->
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Espías.com</title>
+    <link rel="stylesheet" href="../design/actividad15.css">
+  </head>
+  <body>
+    <h1>Espías.com</h1>
+    <form action="../dynamic/actividad15.php" method="get">
+      <h2>Escoge el tipo de mensaje</h2>
+      <h2>En morse, los puntos se representan con asteriscos (*) <br>y las rayas con guiones(-)</h2>
+      <br> <br>
+      <table align="center">
+        <tr>
+          <td><input type="radio" name="tipo" value="morse" required>Morse (se convierte a texto) </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="tipo" value="texto" required>Texto (se convierte a morse)</td>
+        </tr>
+        <tr>
+          <td><textarea name="mensaje" rows="8" cols="80" required></textarea></td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="Enviar" value="Enviar"></td>
+        </tr>
+        <tr>
+          <td>Nota: Si selecciona texto, no puede ingresar asteriscos(*), ni guiones(-), ni diagonales(/). <br>
+          De igual forma, si ingresa caracteres no válidos, el programa no los traducirá.</td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
