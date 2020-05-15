@@ -130,7 +130,8 @@
       if ($_SESSION['tipo']=="Alumno")
       {
         echo "¿Cómo estás alumno ".$_SESSION['usuario']."?<br>
-        Recuerda que si requieres unos días de descanso, solicítalos a tu tutor.
+        Recuerda que si requieres unos días de descanso, solicítalos a tu tutor.<br>
+        <iframe src=\"../templates/alumnos.html\" width=\"50%\" height=\"300px\"></iframe>
         ";
       }
       //Pantalla de Profesor
@@ -138,7 +139,8 @@
       {
         echo "Profesor ".$_SESSION['usuario']."<br>
           Sus alumnos han trabajado muy duro en entregarle esta práctica.<br>
-          Póngales 10, por favor.
+          Póngales 10, por favor.<br>
+          <iframe src=\"../templates/profesor.html\" width=\"50%\" height=\"300px\"></iframe>
         ";
       }
       //Pantalla de Familiar
@@ -148,7 +150,9 @@
         Su hije es perfecto tal y como es. No porque sea mejor que otros.
         Su hije sólo es. Y la dirección espera que le de el amor que todos
         merecemos.
+        <iframe src=\"../templates/familiar.html\" width=\"50%\" height=\"300px\"></iframe>
         ";
+
       }
       //Botón de cierre de sesión
       echo "
