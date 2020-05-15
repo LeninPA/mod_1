@@ -1,4 +1,11 @@
 <?php
+    //Actividad17
+    /*Este programa es un formulario que permite el ingreso de alumnos,
+    familiares o profesores al sistema del Instituto Nueva Ciudad de
+    México, Nuevo México, Marte. Se selecciona un nombre de usuario,
+    la categoría del usuario, una fuente, un color de fondo, uno de letra
+    y se muestra una pantalla específica a cada uno. En esa misma se
+    puede cerrar sesión.*/
     //Función para cierre de sesión
     function cerrar()
     {
@@ -32,7 +39,7 @@
       //Formulario
       echo"
               <form method='POST' action='./actividad17.php'>
-                <fieldset>
+                <fieldset style=\"text-align: center;\">
                   <legend>Ingreso al sistema</legend>
                   Usuario: <input type='text' name='usuario' required><br><br>
                   Soy:<br>
@@ -67,6 +74,31 @@
                   <input type='submit' value='Inicio de sesión'>
                 </fieldset>
               </form>
+              <table>
+                <tr>
+                  <td style=\"text-align:justify;\">
+                    <p>
+                      Tras el gran confinamiento, los pueblos originarios de la Tierra se
+                      unieron en la Confederación Federalista Terrana. Con el apoyo conjunto de
+                      la Gran Korea (los antiguos territorios de Korea, Japón y Taiwan),
+                      la Gran Colombia (los antiguas colonias españolas), Europa, Australia y la
+                      Unión de Estados Africanos, se vencieron las fuerzas imperialistas de
+                      los Estados Unidos, y Rusia en la
+                      colonización y terraformación de marte. Fue en este glorioso planeta que inició el proyecto
+                      para una nueva humanidad. Una humanidad libre e inclusiva en la que
+                      no existe la esclavitud, no existe la explotación y todas las naciones
+                      conviven en paz. Tú, querido marciano, tienes derecho educación de calidad
+                      y gratuita en todos los niveles. Te agradecemos que hayas escogido el
+                      <strong>Instituto Nueva Ciudad de México, Nuevo México, Marte</strong> para
+                      continuar tu educación. Espero que disfrutes tu estadía, consulta con tu
+                      tutor para establecer tu horario y grupo para el ciclo escolar 3104-3105.
+                    </p>
+                  </td>
+                  <td>
+                    <img src=\"../design/img/marte.png\" alt=\"Antiguo Mapa de Marte\" width='100%'>
+                  </td>
+                </tr>
+              </table>
       ";
     }
     //Creación de COOKIES
