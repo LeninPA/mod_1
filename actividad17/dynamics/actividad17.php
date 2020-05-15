@@ -14,6 +14,8 @@
       header("Location:actividad17.php");
     }
     //Cada que se accede al sitio se inicia sesión
+    session_name("Lenin Pavon");
+    session_id("19112003");
     session_start();
     //Inicio de HTML
     echo "
