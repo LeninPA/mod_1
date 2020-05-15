@@ -1,12 +1,14 @@
 <?php
-    session_start();
-    //Inicio de HTML
+    //Función para cierre de sesión
     function cerrar()
     {
       session_unset();
       session_destroy();
       header("Location:actividad17.php");
     }
+    //Cada que se accede al sitio se inicia sesión
+    session_start();
+    //Inicio de HTML
     echo "
         <!DOCTYPE html>
         <html lang=\"es\" dir=\"ltr\">
@@ -16,16 +18,19 @@
             <link rel=\"stylesheet\" type=\"text/css\" href=\"../design/actividad17.css\">
           </head>
       ";
-    //Pantalla de inicio
+    //Verifica si se ha cerrado la sesión
     $cerrar=$_POST['cerrar'];
     if ($cerrar=='Cerrar sesión')
     {
       cerrar();
     }
+    //Pantalla de inicio
     if (!isset($_SESSION['usuario']) && !isset($_POST['usuario']))
-    {
+    { //Encabezado
       echo" <body>
-              <h1>Instituto Nueva Ciudad de México, Nuevo México, Marte</h1>
+              <h1>Instituto Nueva Ciudad de México, Nuevo México, Marte</h1>";
+      //Formulario
+      echo"
               <form method='POST' action='./actividad17.php'>
                 <fieldset>
                   <legend>Ingreso al sistema</legend>
@@ -64,6 +69,7 @@
               </form>
       ";
     }
+    //Creación de COOKIES
     elseif (!isset($_SESSION['usuario']))
     {
       $_SESSION['usuario']=$_POST['usuario'];
@@ -73,16 +79,27 @@
       $_SESSION['colorLetra']=$_POST['colorL'];
       header("Location:actividad17.php");
     }
+    //Impresión de pantallas
     else
     {
       $colorF=$_SESSION['colorFondo'];
       $colorL=$_SESSION['colorLetra'];
       $fuente=$_SESSION['fuente'];
-      echo "<body style=\"background-color:$colorF; font-family: '$fuente'; color: $colorL;text-align:center;font-size:2em;\">";
+      //Personalización de la página
+      echo "<body style=\"
+              background-color:$colorF;
+              font-family: '$fuente';
+              color: $colorL;
+              text-align:center;
+              font-size:2em;\">";
+      //Pantalla de Alumno
       if ($_SESSION['tipo']=="Alumno")
       {
-        echo "¿Cómo estás alumno".$_SESSION['usuario']."?";
+        echo "¿Cómo estás alumno ".$_SESSION['usuario']."?<br>
+        Recuerda que si requieres unos días de descanso, solicítalos a tu tutor.
+        ";
       }
+      //Pantalla de Profesor
       elseif ($_SESSION['tipo']=="Profesor")
       {
         echo "Profesor ".$_SESSION['usuario']."<br>
@@ -90,10 +107,16 @@
           Póngales 10, por favor.
         ";
       }
+      //Pantalla de Familiar
       elseif ($_SESSION['tipo']=="Familiar")
       {
-        echo "Bienvenido Familiar: ".$_SESSION['usuario'];
+        echo "Bienvenido Familiar: ".$_SESSION['usuario']."<br>
+        Su hije es perfecto tal y como es. No porque sea mejor que otros.
+        Su hije sólo es. Y la dirección espera que le de el amor que todos
+        merecemos.
+        ";
       }
+      //Botón de cierre de sesión
       echo "
       <form method='POST' action='./actividad17.php'>
         <input type='submit' name='cerrar' value='Cerrar sesión'>
