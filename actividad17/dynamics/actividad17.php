@@ -131,7 +131,8 @@
       {
         echo "¿Cómo estás alumno ".$_SESSION['usuario']."?<br>
         Recuerda que si requieres unos días de descanso, solicítalos a tu tutor.<br>
-        <iframe src=\"../templates/alumnos.html\" width=\"50%\" height=\"300px\"></iframe>
+        <a href=\"../templates/alumnosA.html\">Avisos</a><br>
+        <a href=\"../templates/alumnosB.html\">Calificaciones</a>
         ";
       }
       //Pantalla de Profesor
@@ -140,7 +141,8 @@
         echo "Profesor ".$_SESSION['usuario']."<br>
           Sus alumnos han trabajado muy duro en entregarle esta práctica.<br>
           Póngales 10, por favor.<br>
-          <iframe src=\"../templates/profesor.html\" width=\"50%\" height=\"300px\"></iframe>
+          <a href=\"../templates/profesorA.html\">Avisos</a><br>
+          <a href=\"../templates/profesorB.html\">Calificaciones</a>
         ";
       }
       //Pantalla de Familiar
@@ -149,8 +151,9 @@
         echo "Bienvenido Familiar: ".$_SESSION['usuario']."<br>
         Su hije es perfecto tal y como es. No porque sea mejor que otros.
         Su hije sólo es. Y la dirección espera que le de el amor que todos
-        merecemos.
-        <iframe src=\"../templates/familiar.html\" width=\"50%\" height=\"300px\"></iframe>
+        merecemos.<br>
+        <a href=\"../templates/familiarA.html\">Avisos</a><br>
+        <a href=\"../templates/familiarB.html\">Eventos</a>
         ";
 
       }
