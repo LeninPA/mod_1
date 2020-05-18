@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="../statics/actividad18.css">
+  <body>
+    <h1>Galería "Sin Sentido"</h1>
+    <h3>Seleccione el archivo de la imagen de su obra (sólo .jpg, .jpeg, o .png)</h3>
+    <form enctype="multipart/form-data" action="../dynamics/validacion.php" method="post">
+      <input type="file" name="obra" required>
+      <h4>Datos de la obra</h4>
+      <table align="center">
+        <tr>
+          <td>Nombre de la obra</td>
+          <td><input type="text" name="nombre"></td>
+        </tr>
+        <tr>
+          <td>Autor de la obra</td>
+          <td><input type="text" name="autor"></td>
+        </tr>
+        <tr>
+          <td>Año</td>
+          <td><input type="number" name="year"></td>
+        </tr>
+      </table><br><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
